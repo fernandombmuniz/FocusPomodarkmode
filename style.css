@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --base-grey: 240;
+    --light-grey: hsl(var(--base-grey), 9%, 89%);
+    --dark-grey: hsl(var(--base-grey), 6%, 21%);
+    --darkmode-grey: hsl(var(--base-grey), 6%, 17%);
+
+
+    --ocean-blue:hsl(194, 97%, 31%);
+    --ocean-bluedark:hsl(195, 74%, 15%);
+
+
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--white-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-grey);
+}
+
+.whiteBg {
+    background-color: var(--white-color);
+}
+
+.darkBg {
+    background-color: var(--black-color); 
+}
+
+.darkMode {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr;
+    min-height: 100vh;
+}
+
+.col-1 {
+    justify-self: center;
+    align-self: center;
+}
+
+.timer {
+    display:flex;
+    font-size: clamp(12rem, 4rem + 6vw, 24rem);
+
+}
+.timer-controls{
+    display:flex;
+    gap: 4.5rem;
+}
+
+span {
+    color: #C4C4CC;
+}
+
+.textWhite {
+    color:var(--white-color);
+}
+
+.col-1 {
+    width: clamp(30rem, 20rem + 60vw, 35rem );
+    height: clamp(20rem, 15rem + 60vh, 25rem);
+    background-color: var(--darkmode-grey);
+    border-radius: 2.4rem;
+    padding: 1rem;
+}
+
+.col-2 {
+    justify-self: center;
+    align-self: center;
+}
+
+.ambient-sounds-1,
+.ambient-sounds-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.2rem;
+    gap: 3.2rem;
+}
+
+.cardForestOff,
+.cardRainOff,
+.cardCoffeeShopOff,
+.cardFirePlaceOff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(10rem, 10rem + 30vw, 15rem );
+    height: clamp(12rem, 12rem + 30vh, 16rem);
+    background-color: var(--darkmode-grey);
+    border-radius: 2.4rem;
+}
+.cardForestOn,
+.cardRainOn,
+.cardCoffeeShopOn,
+.cardFirePlaceOn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(10rem, 10rem + 30vw, 15rem );
+    height: clamp(12rem, 12rem + 30vh, 16rem);
+    background-color: var(--ocean-bluedark);
+    border-radius: 2.4rem;
+}
+
+.hide {
+    display: none;
+}
+
+.cardForestOff:hover,
+.cardRainOff:hover,
+.cardFirePlaceOff:hover,
+.cardCoffeeShopOff:hover {
+    background-color: var(--ocean-bluedark);
+    transition: 0.2s;
+}
+
+.active {
+    background-color: var(--ocean-bluedark);
+}
+
+button {
+    background: transparent;
+    border:none;
+    cursor: pointer;
+}
+
+.range {
+    margin-top: 1rem;
+}
+
+.rain-sound {
+    color: #FFF
+}
